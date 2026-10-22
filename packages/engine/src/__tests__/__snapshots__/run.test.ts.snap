@@ -1,0 +1,433 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`full-run snapshots > TLS 1.2 + HTTP/2, seed 7 1`] = `
+"marks dnsDoneUs=85.880 connectedUs=110.794 tlsDoneUs=162.247 firstByteUs=218.025 firstPaintUs=246.356 loadUs=273.720 end=331.452
+#1 0.200 laptop>resolver DNS dns 71B A example.com?
+#2 11.835 resolver>root DNS dns 71B A example.com? → root
+#3 20.331 root>resolver DNS dns 119B ask a.gtld-servers.net
+#4 28.876 resolver>tld DNS dns 71B A example.com? → .com
+#5 39.100 tld>resolver DNS dns 139B ask ns1.example.com
+#6 49.318 resolver>ns1 DNS dns 71B A example.com? → ns1
+#7 61.880 ns1>resolver DNS dns 87B 203.0.113.10 · TTL 3600
+#8 74.212 resolver>laptop DNS dns 87B 203.0.113.10 · TTL 3600
+#9 85.880 laptop>cdn TCP tcp 66B SYN
+#10 98.353 cdn>laptop TCP tcp 66B SYN, ACK
+#11 110.794 laptop>cdn TCP tcp 54B ACK
+#12 110.794 laptop>cdn TLS tls 178B ClientHello
+#13 123.805 cdn>laptop TLS tls 1514B ServerHello · cert · ServerHelloDone (1/2)
+#14 123.805 cdn>laptop TLS tls 675B ServerHello · cert · ServerHelloDone (2/2)
+#15 136.941 laptop>cdn TCP tls 54B ACK
+#16 137.341 laptop>cdn TLS tls 147B ClientKeyExchange · Finished
+#17 149.933 cdn>laptop TLS tls 105B ChangeCipherSpec · Finished
+#18 162.247 laptop>cdn HTTP/2 request 291B GET / (HTTP/2)
+#19 202.247 laptop>cdn TCP request 54B ACK
+#20 204.992 cdn>laptop HTTP/2 response 1470B 200 OK /
+#21 218.025 laptop>cdn HTTP/2 render 560B GET /style.css, /font.woff2, /app.js
+#22 231.174 cdn>laptop HTTP/2 render 1514B 200 OK ×3 (1/17)
+#23 231.174 cdn>laptop HTTP/2 render 1514B 200 OK ×3 (2/17)
+#24 231.174 cdn>laptop HTTP/2 render 1514B 200 OK ×3 (3/17)
+#25 231.174 cdn>laptop HTTP/2 render 1514B 200 OK ×3 (4/17)
+#26 231.174 cdn>laptop HTTP/2 render 1514B 200 OK ×3 (5/17)
+#27 231.174 cdn>laptop HTTP/2 render 1514B 200 OK ×3 (6/17)
+#28 231.174 cdn>laptop HTTP/2 render 1514B 200 OK ×3 (7/17)
+#29 231.174 cdn>laptop HTTP/2 render 1514B 200 OK ×3 (8/17)
+#30 231.174 cdn>laptop HTTP/2 render 1514B 200 OK ×3 (9/17)
+#31 231.174 cdn>laptop HTTP/2 render 1514B 200 OK ×3 (10/17)
+#32 244.227 laptop>cdn TCP render 54B ACK
+#33 245.518 laptop>cdn TCP render 54B ACK
+#34 246.671 laptop>cdn TCP render 54B ACK
+#35 247.971 laptop>cdn TCP render 54B ACK
+#36 249.145 laptop>cdn TCP render 54B ACK
+#37 256.760 cdn>laptop HTTP/2 render 1514B 200 OK ×3 (11/17)
+#38 256.760 cdn>laptop HTTP/2 render 1514B 200 OK ×3 (12/17)
+#39 256.760 cdn>laptop HTTP/2 render 1514B 200 OK ×3 (13/17)
+#40 256.760 cdn>laptop HTTP/2 render 1514B 200 OK ×3 (14/17)
+#41 257.792 cdn>laptop HTTP/2 render 1514B 200 OK ×3 (15/17)
+#42 257.792 cdn>laptop HTTP/2 render 1514B 200 OK ×3 (16/17)
+#43 257.792 cdn>laptop HTTP/2 render 523B 200 OK ×3 (17/17)
+#44 269.983 laptop>cdn TCP render 54B ACK
+#45 271.058 laptop>cdn TCP render 54B ACK
+#46 272.225 laptop>cdn TCP render 54B ACK
+#47 272.998 laptop>cdn TCP render 54B ACK
+#48 293.720 laptop>cdn TCP render 54B FIN, ACK
+#49 306.104 cdn>laptop TCP render 54B ACK
+#50 306.204 cdn>laptop TCP render 54B FIN, ACK
+#51 318.834 laptop>cdn TCP render 54B ACK"
+`;
+
+exports[`full-run snapshots > example.com, seed 42 1`] = `
+"marks dnsDoneUs=85.875 connectedUs=111.076 tlsDoneUs=138.101 firstByteUs=193.942 firstPaintUs=221.790 loadUs=281.106 end=338.780
+#1 0.200 laptop>resolver DNS dns 71B A example.com?
+#2 11.960 resolver>root DNS dns 71B A example.com? → root
+#3 20.312 root>resolver DNS dns 119B ask a.gtld-servers.net
+#4 28.860 resolver>tld DNS dns 71B A example.com? → .com
+#5 39.273 tld>resolver DNS dns 139B ask ns1.example.com
+#6 49.481 resolver>ns1 DNS dns 71B A example.com? → ns1
+#7 62.020 ns1>resolver DNS dns 87B 203.0.113.10 · TTL 3600
+#8 74.386 resolver>laptop DNS dns 87B 203.0.113.10 · TTL 3600
+#9 85.875 laptop>cdn TCP tcp 66B SYN
+#10 98.413 cdn>laptop TCP tcp 66B SYN, ACK
+#11 111.076 laptop>cdn TCP tcp 54B ACK
+#12 111.076 laptop>cdn TLS tls 246B ClientHello · key share
+#13 124.336 cdn>laptop TLS tls 1514B ServerHello · cert · Finished (1/2)
+#14 124.336 cdn>laptop TLS tls 808B ServerHello · cert · Finished (2/2)
+#15 137.701 laptop>cdn TCP tls 54B ACK
+#16 138.101 laptop>cdn TLS tls 112B Finished
+#17 138.101 laptop>cdn HTTP request 209B GET /
+#18 150.874 cdn>laptop TCP request 54B ACK
+#19 180.874 cdn>laptop HTTP response 1391B 200 OK /
+#20 193.942 laptop>cdn HTTP render 205B GET /style.css
+#21 207.006 cdn>laptop HTTP render 1514B 200 OK /style.css (1/2)
+#22 207.006 cdn>laptop HTTP render 406B 200 OK /style.css (2/2)
+#23 220.287 laptop>cdn TCP render 54B ACK
+#24 220.290 laptop>cdn HTTP render 214B GET /font.woff2
+#25 233.200 cdn>laptop HTTP render 1514B 200 OK /font.woff2 (1/13)
+#26 233.200 cdn>laptop HTTP render 1514B 200 OK /font.woff2 (2/13)
+#27 233.200 cdn>laptop HTTP render 1514B 200 OK /font.woff2 (3/13)
+#28 233.200 cdn>laptop HTTP render 1514B 200 OK /font.woff2 (4/13)
+#29 233.200 cdn>laptop HTTP render 1514B 200 OK /font.woff2 (5/13)
+#30 233.200 cdn>laptop HTTP render 1514B 200 OK /font.woff2 (6/13)
+#31 233.200 cdn>laptop HTTP render 1514B 200 OK /font.woff2 (7/13)
+#32 233.200 cdn>laptop HTTP render 1514B 200 OK /font.woff2 (8/13)
+#33 233.200 cdn>laptop HTTP render 1514B 200 OK /font.woff2 (9/13)
+#34 233.200 cdn>laptop HTTP render 1514B 200 OK /font.woff2 (10/13)
+#35 233.200 cdn>laptop HTTP render 1514B 200 OK /font.woff2 (11/13)
+#36 233.200 cdn>laptop HTTP render 1514B 200 OK /font.woff2 (12/13)
+#37 233.200 cdn>laptop HTTP render 1340B 200 OK /font.woff2 (13/13)
+#38 246.512 laptop>cdn TCP render 54B ACK
+#39 247.588 laptop>cdn TCP render 54B ACK
+#40 248.874 laptop>cdn TCP render 54B ACK
+#41 250.161 laptop>cdn TCP render 54B ACK
+#42 251.286 laptop>cdn TCP render 54B ACK
+#43 252.686 laptop>cdn TCP render 54B ACK
+#44 253.706 laptop>cdn HTTP render 187B GET /app.js
+#45 266.727 cdn>laptop HTTP render 1514B 200 OK /app.js (1/2)
+#46 266.727 cdn>laptop HTTP render 1259B 200 OK /app.js (2/2)
+#47 279.863 laptop>cdn TCP render 54B ACK
+#48 301.106 laptop>cdn TCP render 54B FIN, ACK
+#49 313.612 cdn>laptop TCP render 54B ACK
+#50 313.712 cdn>laptop TCP render 54B FIN, ACK
+#51 326.236 laptop>cdn TCP render 54B ACK"
+`;
+
+exports[`full-run snapshots > far.example, seed 42 1`] = `
+"marks dnsDoneUs=85.875 connectedUs=252.049 tlsDoneUs=419.285 firstByteUs=616.120 firstPaintUs=785.439 loadUs=1126.237 end=1395.265
+#1 0.200 laptop>resolver DNS dns 71B A far.example?
+#2 11.960 resolver>root DNS dns 71B A far.example? → root
+#3 20.312 root>resolver DNS dns 107B ask a.nic.example
+#4 28.860 resolver>tld DNS dns 71B A far.example? → .example
+#5 39.273 tld>resolver DNS dns 139B ask ns1.far.example
+#6 49.481 resolver>ns1 DNS dns 71B A far.example? → ns1
+#7 62.020 ns1>resolver DNS dns 87B 203.0.113.80 · TTL 3600
+#8 74.386 resolver>laptop DNS dns 87B 203.0.113.80 · TTL 3600
+#9 85.875 laptop>origin TCP tcp 66B SYN
+#10 168.826 origin>laptop TCP tcp 66B SYN, ACK
+#11 252.049 laptop>origin TCP tcp 54B ACK
+#12 252.049 laptop>origin TLS tls 246B ClientHello · key share
+#13 335.470 origin>laptop TLS tls 1514B ServerHello · cert · Finished (1/2)
+#14 335.470 origin>laptop TLS tls 808B ServerHello · cert · Finished (2/2)
+#15 418.885 laptop>origin TCP tls 54B ACK
+#16 419.285 laptop>origin TLS tls 112B Finished
+#17 419.285 laptop>origin HTTP request 209B GET /
+#18 502.754 origin>laptop TCP request 54B ACK
+#19 532.754 origin>laptop HTTP response 1373B 200 OK /
+#20 616.120 laptop>origin HTTP render 205B GET /style.css
+#21 656.120 laptop>origin TCP render 54B ACK
+#22 700.574 origin>laptop HTTP render 1514B 200 OK /style.css (1/2)
+#23 700.574 origin>laptop HTTP render 390B 200 OK /style.css (2/2)
+#24 783.939 laptop>origin HTTP render 214B GET /font.woff2
+#25 823.939 laptop>origin TCP render 54B ACK
+#26 867.408 origin>laptop HTTP render 1514B 200 OK /font.woff2 (1/13)
+#27 867.408 origin>laptop HTTP render 1514B 200 OK /font.woff2 (2/13)
+#28 867.408 origin>laptop HTTP render 1514B 200 OK /font.woff2 (3/13)
+#29 867.408 origin>laptop HTTP render 1514B 200 OK /font.woff2 (4/13)
+#30 867.408 origin>laptop HTTP render 1514B 200 OK /font.woff2 (5/13)
+#31 867.408 origin>laptop HTTP render 1514B 200 OK /font.woff2 (6/13)
+#32 867.408 origin>laptop HTTP render 1514B 200 OK /font.woff2 (7/13)
+#33 867.408 origin>laptop HTTP render 1514B 200 OK /font.woff2 (8/13)
+#34 867.408 origin>laptop HTTP render 1514B 200 OK /font.woff2 (9/13)
+#35 867.408 origin>laptop HTTP render 1514B 200 OK /font.woff2 (10/13)
+#36 867.408 origin>laptop HTTP render 1514B 200 OK /font.woff2 (11/13)
+#37 867.408 origin>laptop HTTP render 1514B 200 OK /font.woff2 (12/13)
+#38 867.408 origin>laptop HTTP render 1324B 200 OK /font.woff2 (13/13)
+#39 951.370 laptop>origin TCP render 54B ACK
+#40 952.476 laptop>origin TCP render 54B ACK
+#41 953.761 laptop>origin TCP render 54B ACK
+#42 954.945 laptop>origin TCP render 54B ACK
+#43 956.200 laptop>origin TCP render 54B ACK
+#44 957.468 laptop>origin TCP render 54B ACK
+#45 957.935 laptop>origin HTTP render 187B GET /app.js
+#46 997.935 laptop>origin TCP render 54B ACK
+#47 1041.739 origin>laptop HTTP render 1514B 200 OK /app.js (1/2)
+#48 1041.739 origin>laptop HTTP render 1243B 200 OK /app.js (2/2)
+#49 1125.515 laptop>origin TCP render 54B ACK
+#50 1146.237 laptop>origin TCP render 54B FIN, ACK
+#51 1228.857 origin>laptop TCP render 54B ACK
+#52 1228.957 origin>laptop TCP render 54B FIN, ACK
+#53 1312.113 laptop>origin TCP render 54B ACK"
+`;
+
+exports[`full-run snapshots > heavy.example, seed 42 1`] = `
+"marks dnsDoneUs=85.877 connectedUs=111.078 tlsDoneUs=138.106 firstByteUs=265.886 firstPaintUs=321.911 loadUs=657.343 end=715.453
+#1 0.200 laptop>resolver DNS dns 73B A heavy.example?
+#2 11.961 resolver>root DNS dns 73B A heavy.example? → root
+#3 20.313 root>resolver DNS dns 109B ask a.nic.example
+#4 28.861 resolver>tld DNS dns 73B A heavy.example? → .example
+#5 39.274 tld>resolver DNS dns 141B ask ns1.heavy.example
+#6 49.482 resolver>ns1 DNS dns 73B A heavy.example? → ns1
+#7 62.021 ns1>resolver DNS dns 89B 203.0.113.10 · TTL 3600
+#8 74.387 resolver>laptop DNS dns 89B 203.0.113.10 · TTL 3600
+#9 85.877 laptop>cdn TCP tcp 66B SYN
+#10 98.415 cdn>laptop TCP tcp 66B SYN, ACK
+#11 111.078 laptop>cdn TCP tcp 54B ACK
+#12 111.078 laptop>cdn TLS tls 248B ClientHello · key share
+#13 124.338 cdn>laptop TLS tls 1514B ServerHello · cert · Finished (1/2)
+#14 124.338 cdn>laptop TLS tls 814B ServerHello · cert · Finished (2/2)
+#15 137.706 laptop>cdn TCP tls 54B ACK
+#16 138.106 laptop>cdn TLS tls 112B Finished
+#17 138.106 laptop>cdn HTTP request 211B GET /
+#18 150.879 cdn>origin HTTP request 162B GET / (to origin)
+#19 150.879 cdn>laptop TCP request 54B ACK
+#20 216.523 origin>cdn HTTP request 1514B 200 OK / (from origin) (1/2)
+#21 216.523 origin>cdn HTTP request 1472B 200 OK / (from origin) (2/2)
+#22 252.469 cdn>origin TCP request 54B ACK
+#23 252.769 cdn>laptop HTTP response 1514B 200 OK / (1/2)
+#24 252.769 cdn>laptop HTTP response 1485B 200 OK / (2/2)
+#25 266.483 laptop>cdn HTTP render 207B GET /style.css
+#26 279.365 cdn>laptop HTTP render 1514B 200 OK /style.css (1/2)
+#27 279.365 cdn>laptop HTTP render 406B 200 OK /style.css (2/2)
+#28 292.513 laptop>cdn TCP render 54B ACK
+#29 292.576 laptop>cdn HTTP render 207B GET /theme.css
+#30 305.607 cdn>laptop HTTP render 1514B 200 OK /theme.css (1/4)
+#31 305.607 cdn>laptop HTTP render 1514B 200 OK /theme.css (2/4)
+#32 305.607 cdn>laptop HTTP render 1514B 200 OK /theme.css (3/4)
+#33 305.607 cdn>laptop HTTP render 959B 200 OK /theme.css (4/4)
+#34 318.758 laptop>cdn TCP render 54B ACK
+#35 319.995 laptop>cdn TCP render 54B ACK
+#36 320.411 laptop>cdn HTTP render 216B GET /font.woff2
+#37 333.446 cdn>laptop HTTP render 1514B 200 OK /font.woff2 (1/18)
+#38 333.446 cdn>laptop HTTP render 1514B 200 OK /font.woff2 (2/18)
+#39 333.446 cdn>laptop HTTP render 1514B 200 OK /font.woff2 (3/18)
+#40 333.446 cdn>laptop HTTP render 1514B 200 OK /font.woff2 (4/18)
+#41 333.446 cdn>laptop HTTP render 1514B 200 OK /font.woff2 (5/18)
+#42 333.446 cdn>laptop HTTP render 1514B 200 OK /font.woff2 (6/18)
+#43 333.446 cdn>laptop HTTP render 1514B 200 OK /font.woff2 (7/18)
+#44 333.446 cdn>laptop HTTP render 1514B 200 OK /font.woff2 (8/18)
+#45 333.446 cdn>laptop HTTP render 1514B 200 OK /font.woff2 (9/18)
+#46 333.446 cdn>laptop HTTP render 1514B 200 OK /font.woff2 (10/18)
+#47 333.446 cdn>laptop HTTP render 1514B 200 OK /font.woff2 (11/18)
+#48 333.446 cdn>laptop HTTP render 1514B 200 OK /font.woff2 (12/18)
+#49 333.446 cdn>laptop HTTP render 1514B 200 OK /font.woff2 (13/18)
+#50 333.446 cdn>laptop HTTP render 1514B 200 OK /font.woff2 (14/18)
+#51 333.446 cdn>laptop HTTP render 1514B 200 OK /font.woff2 (15/18)
+#52 333.446 cdn>laptop HTTP render 1514B 200 OK /font.woff2 (16/18)
+#53 333.446 cdn>laptop HTTP render 1514B 200 OK /font.woff2 (17/18)
+#54 333.446 cdn>laptop HTTP render 184B 200 OK /font.woff2 (18/18)
+#55 346.626 laptop>cdn TCP render 54B ACK
+#56 347.950 laptop>cdn TCP render 54B ACK
+#57 349.071 laptop>cdn TCP render 54B ACK
+#58 350.337 laptop>cdn TCP render 54B ACK
+#59 351.472 laptop>cdn TCP render 54B ACK
+#60 352.749 laptop>cdn TCP render 54B ACK
+#61 353.945 laptop>cdn TCP render 54B ACK
+#62 355.195 laptop>cdn TCP render 54B ACK
+#63 356.451 laptop>cdn TCP render 54B ACK
+#64 356.541 laptop>cdn HTTP render 221B GET /font-bold.woff2
+#65 369.236 cdn>laptop HTTP render 1514B 200 OK /font-bold.woff2 (1/19)
+#66 369.236 cdn>laptop HTTP render 1514B 200 OK /font-bold.woff2 (2/19)
+#67 369.236 cdn>laptop HTTP render 1514B 200 OK /font-bold.woff2 (3/19)
+#68 369.236 cdn>laptop HTTP render 1514B 200 OK /font-bold.woff2 (4/19)
+#69 369.236 cdn>laptop HTTP render 1514B 200 OK /font-bold.woff2 (5/19)
+#70 369.236 cdn>laptop HTTP render 1514B 200 OK /font-bold.woff2 (6/19)
+#71 369.236 cdn>laptop HTTP render 1514B 200 OK /font-bold.woff2 (7/19)
+#72 369.236 cdn>laptop HTTP render 1514B 200 OK /font-bold.woff2 (8/19)
+#73 369.236 cdn>laptop HTTP render 1514B 200 OK /font-bold.woff2 (9/19)
+#74 369.236 cdn>laptop HTTP render 1514B 200 OK /font-bold.woff2 (10/19)
+#75 369.236 cdn>laptop HTTP render 1514B 200 OK /font-bold.woff2 (11/19)
+#76 369.236 cdn>laptop HTTP render 1514B 200 OK /font-bold.woff2 (12/19)
+#77 369.236 cdn>laptop HTTP render 1514B 200 OK /font-bold.woff2 (13/19)
+#78 369.236 cdn>laptop HTTP render 1514B 200 OK /font-bold.woff2 (14/19)
+#79 369.236 cdn>laptop HTTP render 1514B 200 OK /font-bold.woff2 (15/19)
+#80 369.236 cdn>laptop HTTP render 1514B 200 OK /font-bold.woff2 (16/19)
+#81 369.236 cdn>laptop HTTP render 1514B 200 OK /font-bold.woff2 (17/19)
+#82 369.236 cdn>laptop HTTP render 1514B 200 OK /font-bold.woff2 (18/19)
+#83 369.236 cdn>laptop HTTP render 794B 200 OK /font-bold.woff2 (19/19)
+#84 382.350 laptop>cdn TCP render 54B ACK
+#85 383.760 laptop>cdn TCP render 54B ACK
+#86 384.711 laptop>cdn TCP render 54B ACK
+#87 386.043 laptop>cdn TCP render 54B ACK
+#88 387.295 laptop>cdn TCP render 54B ACK
+#89 388.598 laptop>cdn TCP render 54B ACK
+#90 389.596 laptop>cdn TCP render 54B ACK
+#91 390.883 laptop>cdn TCP render 54B ACK
+#92 392.012 laptop>cdn TCP render 54B ACK
+#93 393.003 laptop>cdn HTTP render 189B GET /app.js
+#94 405.957 cdn>laptop HTTP render 1514B 200 OK /app.js (1/2)
+#95 405.957 cdn>laptop HTTP render 1259B 200 OK /app.js (2/2)
+#96 419.186 laptop>cdn TCP render 54B ACK
+#97 419.645 laptop>cdn HTTP render 192B GET /vendor.js
+#98 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (1/58)
+#99 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (2/58)
+#100 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (3/58)
+#101 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (4/58)
+#102 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (5/58)
+#103 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (6/58)
+#104 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (7/58)
+#105 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (8/58)
+#106 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (9/58)
+#107 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (10/58)
+#108 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (11/58)
+#109 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (12/58)
+#110 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (13/58)
+#111 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (14/58)
+#112 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (15/58)
+#113 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (16/58)
+#114 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (17/58)
+#115 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (18/58)
+#116 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (19/58)
+#117 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (20/58)
+#118 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (21/58)
+#119 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (22/58)
+#120 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (23/58)
+#121 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (24/58)
+#122 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (25/58)
+#123 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (26/58)
+#124 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (27/58)
+#125 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (28/58)
+#126 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (29/58)
+#127 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (30/58)
+#128 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (31/58)
+#129 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (32/58)
+#130 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (33/58)
+#131 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (34/58)
+#132 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (35/58)
+#133 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (36/58)
+#134 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (37/58)
+#135 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (38/58)
+#136 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (39/58)
+#137 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (40/58)
+#138 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (41/58)
+#139 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (42/58)
+#140 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (43/58)
+#141 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (44/58)
+#142 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (45/58)
+#143 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (46/58)
+#144 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (47/58)
+#145 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (48/58)
+#146 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (49/58)
+#147 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (50/58)
+#148 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (51/58)
+#149 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (52/58)
+#150 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (53/58)
+#151 432.471 cdn>laptop HTTP render 1514B 200 OK /vendor.js (54/58)
+#152 445.687 laptop>cdn TCP render 54B ACK
+#153 446.908 laptop>cdn TCP render 54B ACK
+#154 447.964 laptop>cdn TCP render 54B ACK
+#155 449.340 laptop>cdn TCP render 54B ACK
+#156 450.554 laptop>cdn TCP render 54B ACK
+#157 451.713 laptop>cdn TCP render 54B ACK
+#158 452.882 laptop>cdn TCP render 54B ACK
+#159 454.115 laptop>cdn TCP render 54B ACK
+#160 455.433 laptop>cdn TCP render 54B ACK
+#161 456.592 laptop>cdn TCP render 54B ACK
+#162 457.714 laptop>cdn TCP render 54B ACK
+#163 458.362 cdn>laptop HTTP render 1514B 200 OK /vendor.js (55/58)
+#164 458.362 cdn>laptop HTTP render 1514B 200 OK /vendor.js (56/58)
+#165 458.362 cdn>laptop HTTP render 1514B 200 OK /vendor.js (57/58)
+#166 458.362 cdn>laptop HTTP render 585B 200 OK /vendor.js (58/58)
+#167 459.098 laptop>cdn TCP render 54B ACK
+#168 460.220 laptop>cdn TCP render 54B ACK
+#169 461.268 laptop>cdn TCP render 54B ACK
+#170 462.711 laptop>cdn TCP render 54B ACK
+#171 463.930 laptop>cdn TCP render 54B ACK
+#172 465.128 laptop>cdn TCP render 54B ACK
+#173 466.169 laptop>cdn TCP render 54B ACK
+#174 467.533 laptop>cdn TCP render 54B ACK
+#175 468.708 laptop>cdn TCP render 54B ACK
+#176 469.906 laptop>cdn TCP render 54B ACK
+#177 471.201 laptop>cdn TCP render 54B ACK
+#178 472.440 laptop>cdn TCP render 54B ACK
+#179 473.590 laptop>cdn TCP render 54B ACK
+#180 474.638 laptop>cdn TCP render 54B ACK
+#181 475.994 laptop>cdn TCP render 54B ACK
+#182 477.184 laptop>cdn TCP render 54B ACK
+#183 478.351 laptop>cdn TCP render 54B ACK
+#184 479.651 laptop>cdn TCP render 54B ACK
+#185 479.847 laptop>cdn HTTP render 195B GET /analytics.js
+#186 492.503 cdn>origin HTTP render 174B GET /analytics.js (to origin)
+#187 519.847 laptop>cdn TCP render 54B ACK
+#188 528.748 origin>cdn HTTP render 1514B 200 OK /analytics.js (from origin) (1/13)
+#189 528.748 origin>cdn HTTP render 1514B 200 OK /analytics.js (from origin) (2/13)
+#190 528.748 origin>cdn HTTP render 1514B 200 OK /analytics.js (from origin) (3/13)
+#191 528.748 origin>cdn HTTP render 1514B 200 OK /analytics.js (from origin) (4/13)
+#192 528.748 origin>cdn HTTP render 1514B 200 OK /analytics.js (from origin) (5/13)
+#193 528.748 origin>cdn HTTP render 1514B 200 OK /analytics.js (from origin) (6/13)
+#194 528.748 origin>cdn HTTP render 1514B 200 OK /analytics.js (from origin) (7/13)
+#195 528.748 origin>cdn HTTP render 1514B 200 OK /analytics.js (from origin) (8/13)
+#196 528.748 origin>cdn HTTP render 1514B 200 OK /analytics.js (from origin) (9/13)
+#197 528.748 origin>cdn HTTP render 1514B 200 OK /analytics.js (from origin) (10/13)
+#198 528.748 origin>cdn HTTP render 1514B 200 OK /analytics.js (from origin) (11/13)
+#199 532.503 cdn>laptop TCP render 54B ACK
+#200 564.220 cdn>origin TCP render 54B ACK
+#201 564.786 cdn>origin TCP render 54B ACK
+#202 564.788 cdn>origin TCP render 54B ACK
+#203 564.790 cdn>origin TCP render 54B ACK
+#204 564.792 cdn>origin TCP render 54B ACK
+#205 599.378 origin>cdn HTTP render 1514B 200 OK /analytics.js (from origin) (12/13)
+#206 599.378 origin>cdn HTTP render 1292B 200 OK /analytics.js (from origin) (13/13)
+#207 604.793 cdn>origin TCP render 54B ACK
+#208 635.338 cdn>origin TCP render 54B ACK
+#209 635.638 cdn>laptop HTTP render 1514B 200 OK /analytics.js (1/13)
+#210 635.638 cdn>laptop HTTP render 1514B 200 OK /analytics.js (2/13)
+#211 635.638 cdn>laptop HTTP render 1514B 200 OK /analytics.js (3/13)
+#212 635.638 cdn>laptop HTTP render 1514B 200 OK /analytics.js (4/13)
+#213 635.638 cdn>laptop HTTP render 1514B 200 OK /analytics.js (5/13)
+#214 635.638 cdn>laptop HTTP render 1514B 200 OK /analytics.js (6/13)
+#215 635.638 cdn>laptop HTTP render 1514B 200 OK /analytics.js (7/13)
+#216 635.638 cdn>laptop HTTP render 1514B 200 OK /analytics.js (8/13)
+#217 635.638 cdn>laptop HTTP render 1514B 200 OK /analytics.js (9/13)
+#218 635.638 cdn>laptop HTTP render 1514B 200 OK /analytics.js (10/13)
+#219 635.638 cdn>laptop HTTP render 1514B 200 OK /analytics.js (11/13)
+#220 635.638 cdn>laptop HTTP render 1514B 200 OK /analytics.js (12/13)
+#221 635.638 cdn>laptop HTTP render 1305B 200 OK /analytics.js (13/13)
+#222 649.371 laptop>cdn TCP render 54B ACK
+#223 650.396 laptop>cdn TCP render 54B ACK
+#224 651.689 laptop>cdn TCP render 54B ACK
+#225 653.013 laptop>cdn TCP render 54B ACK
+#226 654.276 laptop>cdn TCP render 54B ACK
+#227 655.414 laptop>cdn TCP render 54B ACK
+#228 677.343 laptop>cdn TCP render 54B FIN, ACK
+#229 689.914 cdn>laptop TCP render 54B ACK
+#230 690.014 cdn>laptop TCP render 54B FIN, ACK
+#231 702.749 laptop>cdn TCP render 54B ACK"
+`;
+
+exports[`full-run snapshots > static.example, seed 42 1`] = `
+"marks dnsDoneUs=85.878 connectedUs=111.079 tlsDoneUs=138.108 firstByteUs=165.473 firstPaintUs=192.993 loadUs=192.993 end=250.507
+#1 0.200 laptop>resolver DNS dns 74B A static.example?
+#2 11.962 resolver>root DNS dns 74B A static.example? → root
+#3 20.314 root>resolver DNS dns 110B ask a.nic.example
+#4 28.862 resolver>tld DNS dns 74B A static.example? → .example
+#5 39.275 tld>resolver DNS dns 142B ask ns1.static.example
+#6 49.483 resolver>ns1 DNS dns 74B A static.example? → ns1
+#7 62.022 ns1>resolver DNS dns 90B 203.0.113.10 · TTL 3600
+#8 74.388 resolver>laptop DNS dns 90B 203.0.113.10 · TTL 3600
+#9 85.878 laptop>cdn TCP tcp 66B SYN
+#10 98.416 cdn>laptop TCP tcp 66B SYN, ACK
+#11 111.079 laptop>cdn TCP tcp 54B ACK
+#12 111.079 laptop>cdn TLS tls 249B ClientHello · key share
+#13 124.339 cdn>laptop TLS tls 1514B ServerHello · cert · Finished (1/2)
+#14 124.339 cdn>laptop TLS tls 817B ServerHello · cert · Finished (2/2)
+#15 137.708 laptop>cdn TCP tls 54B ACK
+#16 138.108 laptop>cdn TLS tls 112B Finished
+#17 138.108 laptop>cdn HTTP request 212B GET /
+#18 150.881 cdn>laptop TCP request 54B ACK
+#19 152.881 cdn>laptop HTTP response 528B 200 OK /
+#20 165.473 laptop>cdn HTTP render 208B GET /style.css
+#21 178.539 cdn>laptop HTTP render 483B 200 OK /style.css
+#22 191.493 laptop>cdn TCP render 54B ACK
+#23 212.993 laptop>cdn TCP render 54B FIN, ACK
+#24 225.349 cdn>laptop TCP render 54B ACK
+#25 225.449 cdn>laptop TCP render 54B FIN, ACK
+#26 238.067 laptop>cdn TCP render 54B ACK"
+`;

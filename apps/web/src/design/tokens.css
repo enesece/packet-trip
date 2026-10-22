@@ -1,0 +1,96 @@
+/* Design tokens. Every color in the UI comes from here. */
+:root {
+  --ground: #f7f8fa;
+  --surface: #ffffff;
+  --surface-2: #f1f3f5;
+  --border: #e1e4e8;
+  --border-strong: #c3c8d0;
+  --ink: #0f1115;
+  --muted: #555d69;
+  --ink-bg: #0f1115;
+  --ink-fg: #ffffff;
+  --hex-bg: #0f1115;
+  --hex-fg: #d7dbe2;
+  --hex-muted: #7d8592;
+  --focus: #1971c2;
+  --danger: #c92a2a;
+  --success: #2b8a3e;
+
+  --layer-application: #c2410c;
+  --layer-security: #6741d9;
+  --layer-transport: #1971c2;
+  --layer-network: #2b8a3e;
+  --layer-link: #495057;
+  --layer-browser: #c2255c;
+  /* Text in the network green needs a touch more contrast on white (4.5:1). */
+  --text-network: #237a35;
+  /* Text on filled layer-colored tags. */
+  --tag-fg: #ffffff;
+
+  /* Hex-dump tints are always drawn on the ink background, so they use the light variants. */
+  --hex-application: #ff9e66;
+  --hex-security: #b49cff;
+  --hex-transport: #74b9f2;
+  --hex-network: #69d17f;
+  --hex-link: #c3c8d0;
+  --hex-browser: #ff8db3;
+
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+  --font-ui: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  --timeline-h: 64px;
+}
+
+:root[data-theme='dark'] {
+  --ground: #0d0f13;
+  --surface: #15181e;
+  --surface-2: #1b1f26;
+  --border: #272c35;
+  --border-strong: #3b414d;
+  --ink: #eceef2;
+  --muted: #a3abb8;
+  --ink-bg: #eceef2;
+  --ink-fg: #0f1115;
+  --hex-bg: #08090c;
+  --focus: #74b9f2;
+  --danger: #ff8787;
+  --success: #69d17f;
+
+  /* Lightened so text in the layer color keeps ≥ 4.5:1 on the dark surface. */
+  --layer-application: #fb8c4c;
+  --layer-security: #a991ff;
+  --layer-transport: #6cb2ef;
+  --layer-network: #5fc773;
+  --layer-link: #aeb6c0;
+  --layer-browser: #f77aa6;
+  --text-network: #5fc773;
+  --tag-fg: #0d0f13;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --ground: #0d0f13;
+    --surface: #15181e;
+    --surface-2: #1b1f26;
+    --border: #272c35;
+    --border-strong: #3b414d;
+    --ink: #eceef2;
+    --muted: #a3abb8;
+    --ink-bg: #eceef2;
+    --ink-fg: #0f1115;
+    --hex-bg: #08090c;
+    --focus: #74b9f2;
+    --danger: #ff8787;
+    --success: #69d17f;
+    --layer-application: #fb8c4c;
+    --layer-security: #a991ff;
+    --layer-transport: #6cb2ef;
+    --layer-network: #5fc773;
+    --layer-link: #aeb6c0;
+    --layer-browser: #f77aa6;
+    --text-network: #5fc773;
+    --tag-fg: #0d0f13;
+  }
+}
